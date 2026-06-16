@@ -1,0 +1,5 @@
+<align="center"><size=150%><b><u>Waves</b></u></size>
+<align="left">
+1. Grab the dials in front of the wave with %grab%
+2. Adjust the value by sliding them left or right
+3. Observe the changes of the waves
