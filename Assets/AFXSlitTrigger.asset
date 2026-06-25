@@ -358,6 +358,49 @@ MonoBehaviour:
   referenceName: doubleslitbool
   objectOut: {fileID: 0}
   valueOut: 0
+--- !u!114 &-7798598434524757159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31083620f0ac27046baaf6795306e414, type: 3}
+  m_Name: Bool Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -184, y: 888}
+  ports:
+    keys:
+    - valueOut
+    - objectOut
+    values:
+    - _fieldName: valueOut
+      _node: {fileID: -7798598434524757159}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 8426975254086593226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: objectOut
+      _node: {fileID: -7798598434524757159}
+      _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: InUse
+  objectOut: {fileID: 0}
+  valueOut: 0
 --- !u!114 &-7721559381030584102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +654,48 @@ MonoBehaviour:
   boolComponent: {fileID: 0}
   valueIn: 1
   output: 0
+--- !u!114 &-6603559828974356720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4522f46596baa4da46f18debe5857d, type: 3}
+  m_Name: Get Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 1144}
+  ports:
+    keys:
+    - transform
+    - output
+    values:
+    - _fieldName: transform
+      _node: {fileID: -6603559828974356720}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 8229919908160251624}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6603559828974356720}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  transform: {fileID: 0}
+  output: {x: 0, y: 0, z: 0}
 --- !u!114 &-6308006980437889908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,6 +1898,12 @@ MonoBehaviour:
   - {fileID: 6772658833813212773}
   - {fileID: 6479102912297102066}
   - {fileID: -8580679923725741607}
+  - {fileID: 4148767115290052675}
+  - {fileID: 8229919908160251624}
+  - {fileID: -6603559828974356720}
+  - {fileID: 3555659736099912633}
+  - {fileID: -7798598434524757159}
+  - {fileID: 8426975254086593226}
 --- !u!114 &165960987236929912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,6 +2603,68 @@ MonoBehaviour:
   boolComponent: {fileID: 0}
   valueIn: 0
   output: 0
+--- !u!114 &3555659736099912633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e490f7ab34c294f8318c37bb4bc731, type: 3}
+  m_Name: Update
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 1272}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 3555659736099912633}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 8426975254086593226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &4148767115290052675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -760, y: 1096}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: 4148767115290052675}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8229919908160251624}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: MiddlePoint
+  objectOut: {fileID: 0}
 --- !u!114 &4393440784492333804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3149,6 +3302,159 @@ MonoBehaviour:
       connections:
       - fieldName: exit
         node: {fileID: -2062620113268786797}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  input: 0
+--- !u!114 &8229919908160251624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df58de265f63a6445922d2bf25b73b2c, type: 3}
+  m_Name: Game Object Info
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -568, y: 1096}
+  ports:
+    keys:
+    - input
+    - active
+    - goName
+    - transform
+    - layer
+    - tag
+    values:
+    - _fieldName: input
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: 4148767115290052675}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: active
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: goName
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transform
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: -6603559828974356720}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: layer
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: tag
+      _node: {fileID: 8229919908160251624}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  active: 0
+  goName: 
+  transform: {fileID: 0}
+  layer: 0
+  tag: 
+--- !u!114 &8426975254086593226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f45781cb02d1f4bb7af238b8665c7c, type: 3}
+  m_Name: If
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 104, y: 1128}
+  ports:
+    keys:
+    - ifTrue
+    - ifFalse
+    - input
+    - enter
+    values:
+    - _fieldName: ifTrue
+      _node: {fileID: 8426975254086593226}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: ifFalse
+      _node: {fileID: 8426975254086593226}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 8426975254086593226}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: valueOut
+        node: {fileID: -7798598434524757159}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 8426975254086593226}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 3555659736099912633}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

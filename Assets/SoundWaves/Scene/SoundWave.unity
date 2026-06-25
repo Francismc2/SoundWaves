@@ -76435,7 +76435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1566248629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -76499,6 +76499,10 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - referenceName: LaserSideSingle
     referenceValue: {fileID: 944067286}
+    typeAsString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - referenceName: smoke
+    referenceValue: {fileID: 1769528431}
     typeAsString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1566248632

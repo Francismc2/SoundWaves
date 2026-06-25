@@ -634,7 +634,7 @@ MonoBehaviour:
       _typeConstraint: 2
       _dynamic: 0
   gameObjectIn: {fileID: 0}
-  setActive: 0
+  setActive: 1
 --- !u!114 &4263392377592910563
 MonoBehaviour:
   m_ObjectHideFlags: 0
