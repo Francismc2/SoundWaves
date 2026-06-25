@@ -1,0 +1,763 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8030895675017204102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f45781cb02d1f4bb7af238b8665c7c, type: 3}
+  m_Name: If
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -392}
+  ports:
+    keys:
+    - ifTrue
+    - ifFalse
+    - input
+    - enter
+    values:
+    - _fieldName: ifTrue
+      _node: {fileID: -8030895675017204102}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 6233528080054802870}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: ifFalse
+      _node: {fileID: -8030895675017204102}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 629329052289210973}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -8030895675017204102}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: valueOut
+        node: {fileID: -4278235481755304781}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: -8030895675017204102}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 7399037976128349038}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  input: 0
+--- !u!114 &-4924817974348878601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4522f46596baa4da46f18debe5857d, type: 3}
+  m_Name: Get Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 648, y: 40}
+  ports:
+    keys:
+    - transform
+    - output
+    values:
+    - _fieldName: transform
+      _node: {fileID: -4924817974348878601}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 6822934098629314314}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4924817974348878601}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: vector3
+        node: {fileID: 629329052289210973}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  transform: {fileID: 0}
+  output: {x: 0, y: 0, z: 0}
+--- !u!114 &-4278235481755304781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31083620f0ac27046baaf6795306e414, type: 3}
+  m_Name: Bool Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: -344}
+  ports:
+    keys:
+    - valueOut
+    - objectOut
+    values:
+    - _fieldName: valueOut
+      _node: {fileID: -4278235481755304781}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: objectOut
+      _node: {fileID: -4278235481755304781}
+      _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: bool
+  objectOut: {fileID: 0}
+  valueOut: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b07cc6940040a84ca17ee3cfebe2a57, type: 3}
+  m_Name: GoToPlace
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8030895675017204102}
+  - {fileID: -4278235481755304781}
+  - {fileID: 7399037976128349038}
+  - {fileID: 837274668020478483}
+  - {fileID: 4342645491650043860}
+  - {fileID: 6233528080054802870}
+  - {fileID: 629329052289210973}
+  - {fileID: 6822934098629314314}
+  - {fileID: 1475350856369495768}
+  - {fileID: -4924817974348878601}
+  - {fileID: 6139566728274860159}
+  - {fileID: 7751482887955750111}
+  - {fileID: 3996403446493130502}
+--- !u!114 &629329052289210973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a38346525c1f941b52dd108354e5e4, type: 3}
+  m_Name: Set Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 712, y: -232}
+  ports:
+    keys:
+    - transform
+    - vector3
+    - enter
+    - exit
+    values:
+    - _fieldName: transform
+      _node: {fileID: 629329052289210973}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 4342645491650043860}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: vector3
+      _node: {fileID: 629329052289210973}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -4924817974348878601}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 629329052289210973}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: ifFalse
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 629329052289210973}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  transform: {fileID: 0}
+  vector3: {x: 0, y: 0, z: 0}
+--- !u!114 &837274668020478483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 264, y: -568}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: 837274668020478483}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4342645491650043860}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: objectToSetPosition
+  objectOut: {fileID: 0}
+--- !u!114 &1475350856369495768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: -8}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: 1475350856369495768}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6822934098629314314}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: PointToGoToStart
+  objectOut: {fileID: 0}
+--- !u!114 &3996403446493130502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4522f46596baa4da46f18debe5857d, type: 3}
+  m_Name: Get Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 296}
+  ports:
+    keys:
+    - transform
+    - output
+    values:
+    - _fieldName: transform
+      _node: {fileID: 3996403446493130502}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 6139566728274860159}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3996403446493130502}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: vector3
+        node: {fileID: 6233528080054802870}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  transform: {fileID: 0}
+  output: {x: 0, y: 0, z: 0}
+--- !u!114 &4342645491650043860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df58de265f63a6445922d2bf25b73b2c, type: 3}
+  m_Name: Game Object Info
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 568, y: -600}
+  ports:
+    keys:
+    - input
+    - active
+    - goName
+    - transform
+    - layer
+    - tag
+    values:
+    - _fieldName: input
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: 837274668020478483}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: active
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: goName
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transform
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 6233528080054802870}
+        reroutePoints: []
+      - fieldName: transform
+        node: {fileID: 629329052289210973}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: layer
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: tag
+      _node: {fileID: 4342645491650043860}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  active: 0
+  goName: 
+  transform: {fileID: 0}
+  layer: 0
+  tag: 
+--- !u!114 &6139566728274860159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df58de265f63a6445922d2bf25b73b2c, type: 3}
+  m_Name: Game Object Info
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 296, y: 216}
+  ports:
+    keys:
+    - input
+    - active
+    - goName
+    - transform
+    - layer
+    - tag
+    values:
+    - _fieldName: input
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: 7751482887955750111}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: active
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: goName
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transform
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 3996403446493130502}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: layer
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: tag
+      _node: {fileID: 6139566728274860159}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  active: 0
+  goName: 
+  transform: {fileID: 0}
+  layer: 0
+  tag: 
+--- !u!114 &6233528080054802870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a38346525c1f941b52dd108354e5e4, type: 3}
+  m_Name: Set Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 712, y: -376}
+  ports:
+    keys:
+    - transform
+    - vector3
+    - enter
+    - exit
+    values:
+    - _fieldName: transform
+      _node: {fileID: 6233528080054802870}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 4342645491650043860}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: vector3
+      _node: {fileID: 6233528080054802870}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 3996403446493130502}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 6233528080054802870}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: ifTrue
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6233528080054802870}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  transform: {fileID: 0}
+  vector3: {x: 0, y: 0, z: 0}
+--- !u!114 &6822934098629314314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df58de265f63a6445922d2bf25b73b2c, type: 3}
+  m_Name: Game Object Info
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -40}
+  ports:
+    keys:
+    - input
+    - active
+    - goName
+    - transform
+    - layer
+    - tag
+    values:
+    - _fieldName: input
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: 1475350856369495768}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: active
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: goName
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: transform
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: -4924817974348878601}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: layer
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: tag
+      _node: {fileID: 6822934098629314314}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  active: 0
+  goName: 
+  transform: {fileID: 0}
+  layer: 0
+  tag: 
+--- !u!114 &7399037976128349038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e490f7ab34c294f8318c37bb4bc731, type: 3}
+  m_Name: Update
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -456}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 7399037976128349038}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &7751482887955750111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 136, y: 248}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: 7751482887955750111}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6139566728274860159}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: PointToGoToEnd
+  objectOut: {fileID: 0}
