@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8538861656950597079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe758dc49d9bdb4408730e456e332f43, type: 3}
+  m_Name: Sub Graph End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 200, y: 0}
+  ports:
+    keys:
+    - addOutput
+    - enter
+    values:
+    - _fieldName: addOutput
+      _node: {fileID: -8538861656950597079}
+      _typeQualifiedName: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: -8538861656950597079}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &-7573161626395448787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe758dc49d9bdb4408730e456e332f43, type: 3}
+  m_Name: Sub Graph End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 200, y: 0}
+  ports:
+    keys:
+    - addOutput
+    - enter
+    values:
+    - _fieldName: addOutput
+      _node: {fileID: -7573161626395448787}
+      _typeQualifiedName: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: -7573161626395448787}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &-369224199967453936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b99f4c63d2e44ca9a4932d3e78b41, type: 3}
+  m_Name: Sub Graph Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 0}
+  ports:
+    keys:
+    - addInput
+    - exit
+    values:
+    - _fieldName: addInput
+      _node: {fileID: -369224199967453936}
+      _typeQualifiedName: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -369224199967453936}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf5707f13075894e837bc1495150184, type: 3}
+  m_Name: New AFX Sub Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4637680258660863132}
+  - {fileID: -8538861656950597079}
+--- !u!114 &4637680258660863132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b99f4c63d2e44ca9a4932d3e78b41, type: 3}
+  m_Name: Sub Graph Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 0}
+  ports:
+    keys:
+    - addInput
+    - exit
+    values:
+    - _fieldName: addInput
+      _node: {fileID: 4637680258660863132}
+      _typeQualifiedName: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 4637680258660863132}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
