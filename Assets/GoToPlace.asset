@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: If
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: -392}
+  position: {x: 2552, y: 3128}
   ports:
     keys:
     - ifTrue
@@ -27,7 +27,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: 6233528080054802870}
+        node: {fileID: 5655973055902741420}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: 629329052289210973}
+        node: {fileID: 271930883731106928}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -63,13 +63,75 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 7399037976128349038}
+        node: {fileID: -7300636737758049072}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 2
       _dynamic: 0
   input: 0
+--- !u!114 &-7300636737758049072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25bae32844253e40b4664aac98b9478, type: 3}
+  m_Name: Fixed Update
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2291.1091, y: 3086.849}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: -7300636737758049072}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+--- !u!114 &-7007676239458974179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e921003989b442345a181e0a5f129f04, type: 3}
+  m_Name: Grab Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3352, y: 2920}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: -7007676239458974179}
+      _typeQualifiedName: Engage.AFX.GrabSystem.v2.GrabObject, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: grabObjectIn
+        node: {fileID: 244841267500162856}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: grabbedobject
+  objectOut: {fileID: 0}
 --- !u!114 &-4924817974348878601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +145,7 @@ MonoBehaviour:
   m_Name: Get Position
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 648, y: 40}
+  position: {x: 2952, y: 3560}
   ports:
     keys:
     - transform
@@ -128,7 +190,7 @@ MonoBehaviour:
   m_Name: Bool Reference
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: -344}
+  position: {x: 2296, y: 3176}
   ports:
     keys:
     - valueOut
@@ -155,9 +217,83 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  referenceName: bool
+  referenceName: setPositionBool
   objectOut: {fileID: 0}
   valueOut: 0
+--- !u!114 &-1397891937090054160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7389e1d6b9f20bb46b8ba04dd1ad79a0, type: 3}
+  m_Name: Euler To Quaternion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3720, y: 3832}
+  ports:
+    keys:
+    - eulerAngles
+    - output
+    values:
+    - _fieldName: eulerAngles
+      _node: {fileID: -1397891937090054160}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -1397891937090054160}
+      _typeQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: rotation
+        node: {fileID: 636163627163051266}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  eulerAngles: {x: 0, y: 90, z: 0}
+  output: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &-681040612528872502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e921003989b442345a181e0a5f129f04, type: 3}
+  m_Name: Grab Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2136, y: 3336}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: -681040612528872502}
+      _typeQualifiedName: Engage.AFX.GrabSystem.v2.GrabObject, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: grabObjectIn
+        node: {fileID: 8583968824945869123}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: grabbedobject
+  objectOut: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +309,6 @@ MonoBehaviour:
   nodes:
   - {fileID: -8030895675017204102}
   - {fileID: -4278235481755304781}
-  - {fileID: 7399037976128349038}
   - {fileID: 837274668020478483}
   - {fileID: 4342645491650043860}
   - {fileID: 6233528080054802870}
@@ -184,6 +319,162 @@ MonoBehaviour:
   - {fileID: 6139566728274860159}
   - {fileID: 7751482887955750111}
   - {fileID: 3996403446493130502}
+  - {fileID: 271930883731106928}
+  - {fileID: -681040612528872502}
+  - {fileID: 8583968824945869123}
+  - {fileID: -7007676239458974179}
+  - {fileID: 244841267500162856}
+  - {fileID: 5655973055902741420}
+  - {fileID: -1397891937090054160}
+  - {fileID: 636163627163051266}
+  - {fileID: 7990200805768208860}
+  - {fileID: 3842248768030683682}
+  - {fileID: -7300636737758049072}
+--- !u!114 &244841267500162856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857a29cd33db93041874f5a1b5e3cbea, type: 3}
+  m_Name: Grab Object Is Grabbed
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3512, y: 2904}
+  ports:
+    keys:
+    - grabObjectIn
+    - isGrabbed
+    - isGrabbedLeftHand
+    - isGrabbedRightHand
+    - isGrabbedMouse
+    values:
+    - _fieldName: grabObjectIn
+      _node: {fileID: 244841267500162856}
+      _typeQualifiedName: Engage.AFX.GrabSystem.v2.GrabObject, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: -7007676239458974179}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: isGrabbed
+      _node: {fileID: 244841267500162856}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 5655973055902741420}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedLeftHand
+      _node: {fileID: 244841267500162856}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedRightHand
+      _node: {fileID: 244841267500162856}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedMouse
+      _node: {fileID: 244841267500162856}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  grabObjectIn: {fileID: 0}
+  isGrabbed: 0
+  isGrabbedLeftHand: 0
+  isGrabbedRightHand: 0
+  isGrabbedMouse: 0
+--- !u!114 &271930883731106928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f45781cb02d1f4bb7af238b8665c7c, type: 3}
+  m_Name: If
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2792, y: 3304}
+  ports:
+    keys:
+    - ifTrue
+    - ifFalse
+    - input
+    - enter
+    values:
+    - _fieldName: ifTrue
+      _node: {fileID: 271930883731106928}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: ifFalse
+      _node: {fileID: 271930883731106928}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 629329052289210973}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 271930883731106928}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: isGrabbed
+        node: {fileID: 8583968824945869123}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 271930883731106928}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: ifFalse
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  input: 0
 --- !u!114 &629329052289210973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +488,7 @@ MonoBehaviour:
   m_Name: Set Position
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 712, y: -232}
+  position: {x: 3272, y: 3448}
   ports:
     keys:
     - transform
@@ -235,7 +526,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: ifFalse
-        node: {fileID: -8030895675017204102}
+        node: {fileID: 271930883731106928}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -245,13 +536,84 @@ MonoBehaviour:
       _node: {fileID: 629329052289210973}
       _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: 636163627163051266}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 2
       _dynamic: 0
   transform: {fileID: 0}
   vector3: {x: 0, y: 0, z: 0}
+--- !u!114 &636163627163051266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b69bb551331bf341967ca1f32b4c04c, type: 3}
+  m_Name: Set Local Rotation
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3528, y: 3448}
+  ports:
+    keys:
+    - transform
+    - rotation
+    - enter
+    - exit
+    values:
+    - _fieldName: transform
+      _node: {fileID: 636163627163051266}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 4342645491650043860}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: rotation
+      _node: {fileID: 636163627163051266}
+      _typeQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1397891937090054160}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 636163627163051266}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 629329052289210973}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 636163627163051266}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  transform: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &837274668020478483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +627,7 @@ MonoBehaviour:
   m_Name: Game Object Reference
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -568}
+  position: {x: 2568, y: 2952}
   ports:
     keys:
     - objectOut
@@ -297,7 +659,7 @@ MonoBehaviour:
   m_Name: Game Object Reference
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: -8}
+  position: {x: 2456, y: 3512}
   ports:
     keys:
     - objectOut
@@ -316,6 +678,48 @@ MonoBehaviour:
       _dynamic: 0
   referenceName: PointToGoToStart
   objectOut: {fileID: 0}
+--- !u!114 &3842248768030683682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7389e1d6b9f20bb46b8ba04dd1ad79a0, type: 3}
+  m_Name: Euler To Quaternion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4075.1697, y: 3325.5527}
+  ports:
+    keys:
+    - eulerAngles
+    - output
+    values:
+    - _fieldName: eulerAngles
+      _node: {fileID: 3842248768030683682}
+      _typeQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3842248768030683682}
+      _typeQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: rotation
+        node: {fileID: 7990200805768208860}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  eulerAngles: {x: 0, y: 0, z: 0}
+  output: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &3996403446493130502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +733,7 @@ MonoBehaviour:
   m_Name: Get Position
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: 296}
+  position: {x: 2984, y: 2808}
   ports:
     keys:
     - transform
@@ -374,7 +778,7 @@ MonoBehaviour:
   m_Name: Game Object Info
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 568, y: -600}
+  position: {x: 2872, y: 2920}
   ports:
     keys:
     - input
@@ -425,6 +829,12 @@ MonoBehaviour:
       - fieldName: transform
         node: {fileID: 629329052289210973}
         reroutePoints: []
+      - fieldName: transform
+        node: {fileID: 636163627163051266}
+        reroutePoints: []
+      - fieldName: transform
+        node: {fileID: 7990200805768208860}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -453,6 +863,73 @@ MonoBehaviour:
   transform: {fileID: 0}
   layer: 0
   tag: 
+--- !u!114 &5655973055902741420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f45781cb02d1f4bb7af238b8665c7c, type: 3}
+  m_Name: If
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4008, y: 2888}
+  ports:
+    keys:
+    - ifTrue
+    - ifFalse
+    - input
+    - enter
+    values:
+    - _fieldName: ifTrue
+      _node: {fileID: 5655973055902741420}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: ifFalse
+      _node: {fileID: 5655973055902741420}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 6233528080054802870}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 5655973055902741420}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: isGrabbed
+        node: {fileID: 244841267500162856}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 5655973055902741420}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: ifTrue
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  input: 0
 --- !u!114 &6139566728274860159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +943,7 @@ MonoBehaviour:
   m_Name: Game Object Info
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 296, y: 216}
+  position: {x: 2648, y: 2728}
   ports:
     keys:
     - input
@@ -555,7 +1032,7 @@ MonoBehaviour:
   m_Name: Set Position
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 712, y: -376}
+  position: {x: 3288, y: 3160}
   ports:
     keys:
     - transform
@@ -592,8 +1069,8 @@ MonoBehaviour:
       _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: ifTrue
-        node: {fileID: -8030895675017204102}
+      - fieldName: ifFalse
+        node: {fileID: 5655973055902741420}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -603,7 +1080,10 @@ MonoBehaviour:
       _node: {fileID: 6233528080054802870}
       _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: 7990200805768208860}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 2
@@ -623,7 +1103,7 @@ MonoBehaviour:
   m_Name: Game Object Info
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 312, y: -40}
+  position: {x: 2616, y: 3480}
   ports:
     keys:
     - input
@@ -699,36 +1179,6 @@ MonoBehaviour:
   transform: {fileID: 0}
   layer: 0
   tag: 
---- !u!114 &7399037976128349038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e490f7ab34c294f8318c37bb4bc731, type: 3}
-  m_Name: Update
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -88, y: -456}
-  ports:
-    keys:
-    - exit
-    values:
-    - _fieldName: exit
-      _node: {fileID: 7399037976128349038}
-      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -8030895675017204102}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 2
-      _dynamic: 0
 --- !u!114 &7751482887955750111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,7 +1192,7 @@ MonoBehaviour:
   m_Name: Game Object Reference
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 136, y: 248}
+  position: {x: 2488, y: 2760}
   ports:
     keys:
     - objectOut
@@ -761,3 +1211,149 @@ MonoBehaviour:
       _dynamic: 0
   referenceName: PointToGoToEnd
   objectOut: {fileID: 0}
+--- !u!114 &7990200805768208860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b69bb551331bf341967ca1f32b4c04c, type: 3}
+  m_Name: Set Local Rotation
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3576, y: 3160}
+  ports:
+    keys:
+    - transform
+    - rotation
+    - enter
+    - exit
+    values:
+    - _fieldName: transform
+      _node: {fileID: 7990200805768208860}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: transform
+        node: {fileID: 4342645491650043860}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: rotation
+      _node: {fileID: 7990200805768208860}
+      _typeQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 3842248768030683682}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 7990200805768208860}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6233528080054802870}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7990200805768208860}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  transform: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8583968824945869123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857a29cd33db93041874f5a1b5e3cbea, type: 3}
+  m_Name: Grab Object Is Grabbed
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2296, y: 3320}
+  ports:
+    keys:
+    - grabObjectIn
+    - isGrabbed
+    - isGrabbedLeftHand
+    - isGrabbedRightHand
+    - isGrabbedMouse
+    values:
+    - _fieldName: grabObjectIn
+      _node: {fileID: 8583968824945869123}
+      _typeQualifiedName: Engage.AFX.GrabSystem.v2.GrabObject, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: objectOut
+        node: {fileID: -681040612528872502}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: isGrabbed
+      _node: {fileID: 8583968824945869123}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 271930883731106928}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedLeftHand
+      _node: {fileID: 8583968824945869123}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedRightHand
+      _node: {fileID: 8583968824945869123}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: isGrabbedMouse
+      _node: {fileID: 8583968824945869123}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  grabObjectIn: {fileID: 0}
+  isGrabbed: 0
+  isGrabbedLeftHand: 0
+  isGrabbedRightHand: 0
+  isGrabbedMouse: 0
