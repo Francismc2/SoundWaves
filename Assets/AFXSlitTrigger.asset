@@ -96,7 +96,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: objectOut
-        node: {fileID: 7857795700014838494}
+        node: {fileID: -3146563015313001797}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
@@ -242,6 +242,38 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   referenceName: BasicLaser
+  objectOut: {fileID: 0}
+--- !u!114 &-7938236487168313207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4488, y: 3320}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: -7938236487168313207}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: gameObjectIn
+        node: {fileID: -5872695533778116477}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: halfpieceofpaperLaser
   objectOut: {fileID: 0}
 --- !u!114 &-7798598434524757159
 MonoBehaviour:
@@ -710,7 +742,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: objectOut
-        node: {fileID: -5674962457387458097}
+        node: {fileID: -7938236487168313207}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
@@ -770,10 +802,7 @@ MonoBehaviour:
       _node: {fileID: -5674962457387458097}
       _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: gameObjectIn
-        node: {fileID: -5872695533778116477}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -802,10 +831,7 @@ MonoBehaviour:
       _node: {fileID: -5541390252587388522}
       _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: 8426975254086593226}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 2
@@ -1015,7 +1041,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: objectOut
-        node: {fileID: 5832646578131849025}
+        node: {fileID: 5725116062001686247}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
@@ -1310,6 +1336,49 @@ MonoBehaviour:
       _dynamic: 0
   gameObjectIn: {fileID: 0}
   setActive: 0
+--- !u!114 &-3146563015313001797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31083620f0ac27046baaf6795306e414, type: 3}
+  m_Name: Bool Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1000, y: 3128}
+  ports:
+    keys:
+    - valueOut
+    - objectOut
+    values:
+    - _fieldName: valueOut
+      _node: {fileID: -3146563015313001797}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: objectOut
+      _node: {fileID: -3146563015313001797}
+      _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: boolComponent
+        node: {fileID: -8637030973048002197}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: setsingleslitposition
+  objectOut: {fileID: 0}
+  valueOut: 0
 --- !u!114 &-2900753531714424185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,7 +2179,6 @@ MonoBehaviour:
   - {fileID: -6882716023900345091}
   - {fileID: 8502356180086186177}
   - {fileID: 4324229391945956503}
-  - {fileID: 7857795700014838494}
   - {fileID: -8637030973048002197}
   - {fileID: 405791379721286798}
   - {fileID: -7197758958915356403}
@@ -2180,6 +2248,11 @@ MonoBehaviour:
   - {fileID: -7279442547244237544}
   - {fileID: 7278122420076047853}
   - {fileID: -5541390252587388522}
+  - {fileID: 5725116062001686247}
+  - {fileID: -3146563015313001797}
+  - {fileID: -7938236487168313207}
+  - {fileID: 7333336451547478678}
+  - {fileID: 2600851701426232049}
 --- !u!114 &96457666692605727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,7 +2853,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 5226510395361915001}
+        node: {fileID: 4058312151495748413}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
@@ -2878,6 +2951,47 @@ MonoBehaviour:
   boolComponent: {fileID: 0}
   valueIn: 1
   output: 0
+--- !u!114 &2600851701426232049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60349ad3c9dbe943a96c4c44b9ca8d4, type: 3}
+  m_Name: Timed Update
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -744, y: 2184}
+  ports:
+    keys:
+    - duration
+    - exit
+    values:
+    - _fieldName: duration
+      _node: {fileID: 2600851701426232049}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2600851701426232049}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: 8426975254086593226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  duration: 0.5
 --- !u!114 &2635377172908000446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,7 +3173,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: objectOut
-        node: {fileID: 6651441827921257433}
+        node: {fileID: 7333336451547478678}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
@@ -3271,7 +3385,7 @@ MonoBehaviour:
         node: {fileID: -6443987887442582290}
         reroutePoints: []
       - fieldName: input
-        node: {fileID: 8453275781595875353}
+        node: {fileID: 2454348691740056816}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3523,10 +3637,10 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: 2454348691740056816}
+        node: {fileID: 1116985405049369220}
         reroutePoints: []
       - fieldName: input
-        node: {fileID: 1116985405049369220}
+        node: {fileID: 8453275781595875353}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3535,6 +3649,49 @@ MonoBehaviour:
   collider: {fileID: 0}
   point: {x: 0, y: 0, z: 0}
   output: 0
+--- !u!114 &5725116062001686247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31083620f0ac27046baaf6795306e414, type: 3}
+  m_Name: Bool Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3576, y: 3256}
+  ports:
+    keys:
+    - valueOut
+    - objectOut
+    values:
+    - _fieldName: valueOut
+      _node: {fileID: 5725116062001686247}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: objectOut
+      _node: {fileID: 5725116062001686247}
+      _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: boolComponent
+        node: {fileID: -4977334452242417069}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: sethalfpieceofpaperposition
+  objectOut: {fileID: 0}
+  valueOut: 0
 --- !u!114 &5832646578131849025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3567,10 +3724,7 @@ MonoBehaviour:
       _node: {fileID: 5832646578131849025}
       _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: boolComponent
-        node: {fileID: -4977334452242417069}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -3632,10 +3786,7 @@ MonoBehaviour:
       _node: {fileID: 6651441827921257433}
       _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: gameObjectIn
-        node: {fileID: 3249984360903854803}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -3766,6 +3917,38 @@ MonoBehaviour:
   boolComponent: {fileID: 0}
   valueIn: 0
   output: 0
+--- !u!114 &7333336451547478678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7847316ae2b550459be0198745bd3f5, type: 3}
+  m_Name: Game Object Reference
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2042.4429, y: 3180.0244}
+  ports:
+    keys:
+    - objectOut
+    values:
+    - _fieldName: objectOut
+      _node: {fileID: 7333336451547478678}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: gameObjectIn
+        node: {fileID: 3249984360903854803}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  referenceName: LaserSingleSLIT
+  objectOut: {fileID: 0}
 --- !u!114 &7725668838243589975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3807,49 +3990,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   referenceName: InUse
-  objectOut: {fileID: 0}
-  valueOut: 0
---- !u!114 &7857795700014838494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31083620f0ac27046baaf6795306e414, type: 3}
-  m_Name: Bool Reference
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1000, y: 2936}
-  ports:
-    keys:
-    - valueOut
-    - objectOut
-    values:
-    - _fieldName: valueOut
-      _node: {fileID: 7857795700014838494}
-      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: objectOut
-      _node: {fileID: 7857795700014838494}
-      _typeQualifiedName: Engage.AFX.v1.BoolComponent, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: boolComponent
-        node: {fileID: -8637030973048002197}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  referenceName: sethalfpieceofpaperposition
   objectOut: {fileID: 0}
   valueOut: 0
 --- !u!114 &7969522545977799306
@@ -4047,7 +4187,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -5541390252587388522}
+        node: {fileID: 2600851701426232049}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4105,7 +4245,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 4058312151495748413}
+        node: {fileID: 5226510395361915001}
         reroutePoints: []
       _direction: 0
       _connectionType: 1

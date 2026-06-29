@@ -63,7 +63,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -7300636737758049072}
+        node: {fileID: -5241583607498183122}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -92,10 +92,7 @@ MonoBehaviour:
       _node: {fileID: -7300636737758049072}
       _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -8030895675017204102}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 2
@@ -132,6 +129,47 @@ MonoBehaviour:
       _dynamic: 0
   referenceName: grabbedobject
   objectOut: {fileID: 0}
+--- !u!114 &-5241583607498183122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60349ad3c9dbe943a96c4c44b9ca8d4, type: 3}
+  m_Name: Timed Update
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2245.1497, y: 2958.3208}
+  ports:
+    keys:
+    - duration
+    - exit
+    values:
+    - _fieldName: duration
+      _node: {fileID: -5241583607498183122}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 2
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -5241583607498183122}
+      _typeQualifiedName: Engage.AFX.v1.AFXFlow, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: -8030895675017204102}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  duration: 0.5
 --- !u!114 &-4924817974348878601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +368,7 @@ MonoBehaviour:
   - {fileID: 7990200805768208860}
   - {fileID: 3842248768030683682}
   - {fileID: -7300636737758049072}
+  - {fileID: -5241583607498183122}
 --- !u!114 &244841267500162856
 MonoBehaviour:
   m_ObjectHideFlags: 0
